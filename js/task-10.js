@@ -11,7 +11,6 @@ const refs = {
 
 function onInputChange(event) {
   refs.inputBoxesQuantity.setAttribute('count', event.currentTarget.value);
-  console.log(event.currentTarget.value)
 }
 
 refs.inputBoxesQuantity.addEventListener('input', onInputChange);
@@ -20,7 +19,7 @@ let basicBoxSize = 30;
 
 const createBoxes = () => {
   let countBox = refs.inputBoxesQuantity.getAttribute('count');
-  console.log(countBox);
+
   for (let i = 0; i < countBox; i++) {
     basicBoxSize += 10;
     const newBox = document.createElement('div');
@@ -31,6 +30,7 @@ const createBoxes = () => {
     refs.boxes.append(newBox);
   };
 };
+
 refs.createBoxesBTN.addEventListener('click', createBoxes)
 
 function destroyBoxes() {
