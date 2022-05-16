@@ -7,7 +7,8 @@ function submitHandler(event) {
         .filter((el) => el.tagName === 'INPUT')
         .some((el) => el.value === '');
     if (isFormValid) {
-        alert('Всі поля повинні бути заповнені!')
+        alert('Всі поля повинні бути заповнені!');
+        return;
     };
 
     const email = loginForm.email.value;
